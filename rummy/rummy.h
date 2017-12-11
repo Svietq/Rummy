@@ -6,6 +6,7 @@
 #include "table.h"
 #include "deck.h"
 #include "stack.h"
+#include "deckdirector.h"
 
 #include <numeric>
 #include <string>
@@ -22,8 +23,11 @@ class Rummy : public RummyInterface
 
     std::vector<Player> players;
     Table table;
-    Deck deck;
+    std::unique_ptr<Deck>  deck;
     std::unique_ptr<Stack> stack;
+    std::unique_ptr<DeckDirector> deck_director;
+
+    void set_builder(std::size_t no_of_players, GameType type_of_game);
 
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);

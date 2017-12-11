@@ -10,6 +10,8 @@ public:
     virtual Card & top_card() = 0;
     virtual void pop_card() = 0;
     virtual void push_card(const Card &) = 0;
+    virtual Card * begin() = 0;
+    virtual Card * end() = 0;
 };
 
 #endif // DECK_H

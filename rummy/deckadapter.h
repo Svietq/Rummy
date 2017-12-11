@@ -3,15 +3,17 @@
 
 #include "deck.h"
 
-#include <stack>
+#include <deque>
 
-class DeckAdapter : public Deck, public std::stack<Card>
+class DeckAdapter : public Deck, public std::deque<Card>
 {
 public:
     DeckAdapter();
-    Card & top_card() override { return std::stack<Card>::top(); }
-    void pop_card() override { std::stack<Card>::pop(); }
-    void push_card(const Card & icard) override { std::stack<Card>::push(icard); }
+    Card & top_card() override { return std::deque<Card>::back(); }
+    void pop_card() override { std::deque<Card>::pop_back(); }
+    void push_card( const Card & icard ) override { std::deque<Card>::push_back(icard); }
+    Card * begin() { return static_cast<Card*>(std::deque<Card>::begin()); }
+    Card * end() { return static_cast<Card*>(std::deque<Card>::end()); }
 };
 
 #endif // DECKADAPTER_H

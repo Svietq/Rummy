@@ -1,15 +1,20 @@
 #ifndef CARD_H
 #define CARD_H
 
+#include <vector>
 
 class Card
 {
 public:
-    enum class Color { Spades, Clubs, Diamonds, Hearts };
+    enum class Suit { Clubs, Diamonds, Hearts, Spades };
     enum class Rank  { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace };
+
+    static const std::vector<Suit> v_suit;
+    static const std::vector<Rank> v_rank;
+
     Card();
-    Card(Color icolor, Rank irank) : color{icolor}, rank{irank} {}
-    Color color;
+    Card(Suit isuite, Rank irank) : suite{isuite}, rank{irank} {}
+    Suit suite;
     Rank rank;
 
 };
