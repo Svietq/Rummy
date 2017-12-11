@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     stack.cpp \
     card.cpp \
     joker.cpp \
-    stackadapter.cpp
+    stackadapter.cpp \
+    deckadapter.cpp
 
 HEADERS += \
     rummy.h \
@@ -32,4 +33,5 @@ HEADERS += \
     stack.h \
     card.h \
     joker.h \
-    stackadapter.h
+    stackadapter.h \
+    deckadapter.h
