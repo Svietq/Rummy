@@ -2,6 +2,11 @@
 
 Rummy *Rummy::instance_ = nullptr;
 
+Rummy::Rummy(std::size_t n, GameType type_of_game) : no_of_players{n}
+{
+    rummy_impl = std::move(impl_map[type_of_game]);
+}
+
 Rummy &Rummy::operator=(const Rummy &iclass)
 {
     if(this != &iclass)
@@ -9,10 +14,16 @@ Rummy &Rummy::operator=(const Rummy &iclass)
     return *this;
 }
 
-Rummy &Rummy::get(std::size_t n, const std::string & type)
+Rummy &Rummy::get(std::size_t n, GameType type_of_game)
 {
-    static Rummy temp{ n, type };
+    static Rummy temp{ n, type_of_game };
     instance_ = &temp;
 
     return *instance_;
 }
+
+void Rummy::print_impl_type() const
+{
+    rummy_impl->print_impl_type();
+}
+
