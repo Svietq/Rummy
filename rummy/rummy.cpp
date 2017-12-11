@@ -9,9 +9,9 @@ Rummy &Rummy::operator=(const Rummy &iclass)
     return *this;
 }
 
-Rummy &Rummy::get()
+Rummy &Rummy::get(std::size_t n, const std::string & type)
 {
-    static Rummy temp;
+    static Rummy temp{ n, type };
     instance_ = &temp;
 
     return *instance_;

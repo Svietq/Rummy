@@ -2,5 +2,6 @@
 
 int main()
 {
-    Rummy::get();
+    const auto &game = Rummy::get(3, "trad");
+
 }
