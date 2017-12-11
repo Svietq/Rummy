@@ -14,7 +14,9 @@ SOURCES += main.cpp \
     player.cpp \
     table.cpp \
     deck.cpp \
-    stack.cpp
+    stack.cpp \
+    card.cpp \
+    joker.cpp
 
 HEADERS += \
     rummy.h \
@@ -26,4 +28,6 @@ HEADERS += \
     player.h \
     table.h \
     deck.h \
-    stack.h
+    stack.h \
+    card.h \
+    joker.h
