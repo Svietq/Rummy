@@ -2,8 +2,9 @@
 
 Rummy *Rummy::instance_ = nullptr;
 
-Rummy::Rummy(std::size_t n, GameType type_of_game) : no_of_players{n}
+Rummy::Rummy(std::size_t no_of_players, GameType type_of_game)
 {
+    players.resize(no_of_players);
     rummy_impl = std::move(impl_map[type_of_game]);
 }
 

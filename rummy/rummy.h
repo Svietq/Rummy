@@ -2,20 +2,23 @@
 #define RUMMY_H
 
 #include "rummyinterface.h"
+#include "player.h"
 
 #include <numeric>
 #include <string>
+#include <vector>
 
 class Rummy : public RummyInterface
 {
-    Rummy(std::size_t n, GameType type);
+    Rummy(std::size_t no_of_players, GameType type);
     Rummy(const Rummy &iclass){instance_ = iclass.instance_;}
     Rummy &operator=(const Rummy &iclass);
     ~Rummy() {}
 
     static Rummy *instance_;
 
-    std::size_t no_of_players;
+    std::vector<Player> players;
+
 
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);
