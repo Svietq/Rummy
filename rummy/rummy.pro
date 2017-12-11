@@ -11,7 +11,10 @@ SOURCES += main.cpp \
     rummytradimpl.cpp \
     rummy500impl.cpp \
     rummyginimpl.cpp \
-    player.cpp
+    player.cpp \
+    table.cpp \
+    deck.cpp \
+    stack.cpp
 
 HEADERS += \
     rummy.h \
@@ -20,4 +23,7 @@ HEADERS += \
     rummytradimpl.h \
     rummy500impl.h \
     rummyginimpl.h \
-    player.h
+    player.h \
+    table.h \
+    deck.h \
+    stack.h

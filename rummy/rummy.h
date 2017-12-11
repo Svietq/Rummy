@@ -3,6 +3,9 @@
 
 #include "rummyinterface.h"
 #include "player.h"
+#include "table.h"
+#include "deck.h"
+#include "stack.h"
 
 #include <numeric>
 #include <string>
@@ -18,7 +21,9 @@ class Rummy : public RummyInterface
     static Rummy *instance_;
 
     std::vector<Player> players;
-
+    Table table;
+    Deck deck;
+    Stack stack;
 
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);
