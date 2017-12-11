@@ -23,7 +23,7 @@ class Rummy : public RummyInterface
     std::vector<Player> players;
     Table table;
     Deck deck;
-    Stack stack;
+    std::unique_ptr<Stack> stack;
 
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);
