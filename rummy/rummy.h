@@ -26,12 +26,13 @@ class Rummy : public RummyInterface
     std::unique_ptr<Deck>  deck;
     std::unique_ptr<Stack> stack;
     std::shared_ptr<DeckDirector> deck_director;
+    bool is_over = false;
 
     void set_builder(std::size_t no_of_players, GameType type_of_game);
-
+    void print() const;
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);
-    void play() override {}
+    void play() override;
     void print_impl_type() const;
 
 };

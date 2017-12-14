@@ -12,6 +12,7 @@ class Player
 public:
     Player();
     static std::size_t id;
+    void make_move() {}
 };
 
 #endif // PLAYER_H
