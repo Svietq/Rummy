@@ -23,7 +23,9 @@ SOURCES += main.cpp \
     deckbuilder.cpp \
     decktradbuilder.cpp \
     deck500builder.cpp \
-    deckginbuilder.cpp
+    deckginbuilder.cpp \
+    cardgroup.cpp \
+    cardcomposite.cpp
 
 HEADERS += \
     rummy.h \
@@ -44,4 +46,6 @@ HEADERS += \
     deckbuilder.h \
     decktradbuilder.h \
     deck500builder.h \
-    deckginbuilder.h
+    deckginbuilder.h \
+    cardgroup.h \
+    cardcomposite.h

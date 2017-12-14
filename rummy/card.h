@@ -1,9 +1,11 @@
 #ifndef CARD_H
 #define CARD_H
 
+#include "cardgroup.h"
+
 #include <vector>
 
-class Card
+class Card : public CardGroup
 {
 public:
     enum class Suit { Clubs, Diamonds, Hearts, Spades };
