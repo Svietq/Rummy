@@ -2,6 +2,7 @@
 #define DECK_H
 
 #include "card.h"
+#include <deque>
 
 class Deck
 {
@@ -10,8 +11,8 @@ public:
     virtual Card & top_card() = 0;
     virtual void pop_card() = 0;
     virtual void push_card(const Card &) = 0;
-    virtual Card * begin() = 0;
-    virtual Card * end() = 0;
+    virtual std::deque<Card>::iterator begin() = 0;
+    virtual std::deque<Card>::iterator end() = 0;
 };
 
 #endif // DECK_H

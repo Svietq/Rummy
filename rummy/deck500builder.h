@@ -7,7 +7,7 @@ class Deck500Builder : public DeckBuilder
 {
 public:
     Deck500Builder();
-    void add_jokers() override {}
+//    void add_jokers() override {}
 };
 
 #endif // DECK500BUILDER_H

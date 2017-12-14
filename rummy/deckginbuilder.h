@@ -7,7 +7,7 @@ class DeckGinBuilder : public DeckBuilder
 {
 public:
     DeckGinBuilder();
-    void add_jokers() override {}
+//    void add_jokers() override {}
 };
 
 #endif // DECKGINBUILDER_H

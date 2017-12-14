@@ -25,7 +25,7 @@ class Rummy : public RummyInterface
     Table table;
     std::unique_ptr<Deck>  deck;
     std::unique_ptr<Stack> stack;
-    std::unique_ptr<DeckDirector> deck_director;
+    std::shared_ptr<DeckDirector> deck_director;
 
     void set_builder(std::size_t no_of_players, GameType type_of_game);
 

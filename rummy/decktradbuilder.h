@@ -7,7 +7,7 @@ class DeckTradBuilder : public DeckBuilder
 {
 public:
     DeckTradBuilder();
-    void add_jokers() override;
+//    void add_jokers() override;
 };
 
 #endif // DECKTRADBUILDER_H

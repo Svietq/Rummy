@@ -29,13 +29,13 @@ void Rummy::set_builder(std::size_t no_of_players, GameType type_of_game)
     switch(type_of_game)
     {
     case GameType::Traditional:
-        deck_director = std::make_unique<DeckDirector>(DeckTradBuilder{}, no_of_players);
+        deck_director = std::make_shared<DeckDirector>(DeckTradBuilder{}, no_of_players);
         break;
     case GameType::FiveHundred:
-        deck_director = std::make_unique<DeckDirector>(Deck500Builder{}, no_of_players);
+        deck_director = std::make_shared<DeckDirector>(Deck500Builder{}, no_of_players);
         break;
     case GameType::Gin:
-        deck_director = std::make_unique<DeckDirector>(DeckGinBuilder{}, no_of_players);
+        deck_director = std::make_shared<DeckDirector>(DeckGinBuilder{}, no_of_players);
         break;
     }
 }

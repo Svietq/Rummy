@@ -12,8 +12,8 @@ public:
     Card & top_card() override { return std::deque<Card>::back(); }
     void pop_card() override { std::deque<Card>::pop_back(); }
     void push_card( const Card & icard ) override { std::deque<Card>::push_back(icard); }
-    Card * begin() { return static_cast<Card*>(std::deque<Card>::begin()); }
-    Card * end() { return static_cast<Card*>(std::deque<Card>::end()); }
+    std::deque<Card>::iterator begin() { return begin();}
+    std::deque<Card>::iterator end()   { return end(); }
 };
 
 #endif // DECKADAPTER_H
