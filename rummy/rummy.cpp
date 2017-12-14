@@ -60,6 +60,10 @@ void Rummy::print() const
 {
     gotoxy(0,0);
     std::cout << "Player" << curr_player->id << '\n';
+    for(const auto & x : curr_player->hand)
+    {
+        std::cout << x << "|";
+    }
     gotoxy(0,2);
     std::cout << "Stack: ";
     if(!stack->empty())
@@ -76,7 +80,6 @@ void Rummy::print() const
         gotoxy(player.id*20,3);
         std::cout << "Player" << player.id;
     }
-//    std::cout << Card{Card::Suit::Clubs, Card::Rank::Ace} << '\n';
 }
 
 Rummy &Rummy::get(std::size_t n, GameType type_of_game)
