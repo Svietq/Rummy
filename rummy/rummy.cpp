@@ -5,6 +5,22 @@
 #include "deck500builder.h"
 #include "deckginbuilder.h"
 
+#include "windows.h"
+
+namespace
+{
+
+void gotoxy(short ix, short iy)
+{
+    static HANDLE h = NULL;
+      if(!h)
+        h = GetStdHandle(STD_OUTPUT_HANDLE);
+      COORD c = { ix, iy };
+      SetConsoleCursorPosition(h,c);
+}
+
+}
+
 Rummy *Rummy::instance_ = nullptr;
 
 Rummy::Rummy(std::size_t no_of_players, GameType type_of_game)

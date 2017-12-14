@@ -4,6 +4,7 @@
 #include "cardgroup.h"
 
 #include <vector>
+#include <map>
 
 class Card : public CardGroup
 {
@@ -13,8 +14,10 @@ public:
 
     static const std::vector<Suit> v_suit;
     static const std::vector<Rank> v_rank;
+    static const std::map< Suit, std::string > suit_to_string;
+    static const std::map< Rank, std::string > rank_to_string;
 
-    Card();
+    Card(){}
     Card(Suit isuite, Rank irank) : suite{isuite}, rank{irank} {}
     Suit suite;
     Rank rank;
