@@ -58,7 +58,7 @@ void Rummy::set_builder(std::size_t no_of_players, GameType type_of_game)
 
 void Rummy::print() const
 {
-
+    std::cout << Card{Card::Suit::Clubs, Card::Rank::Ace} << '\n';
 }
 
 Rummy &Rummy::get(std::size_t n, GameType type_of_game)
@@ -71,14 +71,14 @@ Rummy &Rummy::get(std::size_t n, GameType type_of_game)
 
 void Rummy::play()
 {
-    while(!is_over)
-    {
+//    while(!is_over)
+//    {
         print();
         for(auto & player : players)
         {
             player.make_move();
         }
-    }
+//    }
 }
 
 void Rummy::print_impl_type() const

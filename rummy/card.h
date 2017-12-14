@@ -19,9 +19,34 @@ public:
 
     Card(){}
     Card(Suit isuite, Rank irank) : suite{isuite}, rank{irank} {}
+//    Card(Rank irank, Suit isuite) : rank{irank}, suite{isuite} {}
     Suit suite;
     Rank rank;
 
+    friend std::ostream& operator<<(std::ostream& os, const Card& card);
+
 };
 
+
+
 #endif // CARD_H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -29,3 +29,10 @@ const std::map< Card::Rank, std::string > Card::rank_to_string
     {Card::Rank::King,   "King"},
     {Card::Rank::Ace,    "Ace"}
 };
+
+std::ostream& operator<<(std::ostream& os, const Card& card)
+{
+  os << card.rank_to_string.at(card.rank) << std::string{" "} << card.suit_to_string.at(card.suite);
+
+  return os;
+}
