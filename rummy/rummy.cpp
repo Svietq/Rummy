@@ -58,7 +58,25 @@ void Rummy::set_builder(std::size_t no_of_players, GameType type_of_game)
 
 void Rummy::print() const
 {
-    std::cout << Card{Card::Suit::Clubs, Card::Rank::Ace} << '\n';
+    gotoxy(0,0);
+    std::cout << "Player" << curr_player->id << '\n';
+    gotoxy(0,2);
+    std::cout << "Stack: ";
+    if(!stack->empty())
+    {
+        std::cout << stack->top_card();
+    }
+    else
+    {
+        std::cout << "no card";
+    }
+
+    for(auto & player : players)
+    {
+        gotoxy(player.id*20,3);
+        std::cout << "Player" << player.id;
+    }
+//    std::cout << Card{Card::Suit::Clubs, Card::Rank::Ace} << '\n';
 }
 
 Rummy &Rummy::get(std::size_t n, GameType type_of_game)
@@ -73,10 +91,13 @@ void Rummy::play()
 {
 //    while(!is_over)
 //    {
-        print();
+
         for(auto & player : players)
         {
+
             player.make_move();
+            curr_player = &player;
+            print();
         }
 //    }
 }

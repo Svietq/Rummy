@@ -22,6 +22,7 @@ class Rummy : public RummyInterface
     static Rummy *instance_;
 
     std::vector<Player> players;
+    Player * curr_player = nullptr;
     Table table;
     std::unique_ptr<Deck>  deck;
     std::unique_ptr<Stack> stack;

@@ -11,7 +11,8 @@ class Player
     std::vector<CardGroup> hand;
 public:
     Player();
-    static std::size_t id;
+    static std::size_t no_of_players;
+    std::size_t id;
     void make_move() {}
 };
 

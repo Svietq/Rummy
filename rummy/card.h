@@ -18,9 +18,8 @@ public:
     static const std::map< Rank, std::string > rank_to_string;
 
     Card(){}
-    Card(Suit isuite, Rank irank) : suite{isuite}, rank{irank} {}
-//    Card(Rank irank, Suit isuite) : rank{irank}, suite{isuite} {}
-    Suit suite;
+    Card(Suit isuit, Rank irank) : suit{isuit}, rank{irank} {}
+    Suit suit;
     Rank rank;
 
     friend std::ostream& operator<<(std::ostream& os, const Card& card);

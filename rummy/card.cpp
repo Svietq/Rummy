@@ -32,7 +32,17 @@ const std::map< Card::Rank, std::string > Card::rank_to_string
 
 std::ostream& operator<<(std::ostream& os, const Card& card)
 {
-  os << card.rank_to_string.at(card.rank) << std::string{" "} << card.suit_to_string.at(card.suite);
+
+  auto rank_it = card.rank_to_string.find(card.rank);
+  auto suit_it = card.suit_to_string.find(card.suit);
+  if( (rank_it == card.rank_to_string.end()) || (suit_it == card.suit_to_string.end()) )
+  {
+      os << std::string{"no card"};
+  }
+  else
+  {
+      os << card.rank_to_string.at(card.rank) << std::string{" "} << card.suit_to_string.at(card.suit);
+  }
 
   return os;
 }

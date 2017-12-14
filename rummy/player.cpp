@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-std::size_t Player::id = 0;
+std::size_t Player::no_of_players = 0;
 
 Player::Player()
 {
-    std::cout << "I am player with id: " << id << '\n';
-    id++;
+    id = no_of_players;
+    no_of_players++;
 }
