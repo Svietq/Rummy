@@ -10,7 +10,7 @@ public:
     Deck();
     virtual Card & top_card() = 0;
     virtual void pop_card() = 0;
-    virtual void push_card(const Card &) = 0;
+    virtual void push_card(Card &&) = 0;
     virtual std::deque<Card>::iterator begin() = 0;
     virtual std::deque<Card>::iterator end() = 0;
 };

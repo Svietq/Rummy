@@ -7,6 +7,6 @@ void DeckDirector::construct()
     {
         builder->complete_deck();
 //        builder->add_jokers();
-        builder->shuffle_deck();
+//        builder->shuffle_deck();
     }
 }

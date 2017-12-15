@@ -30,6 +30,8 @@ Rummy::Rummy(std::size_t no_of_players, GameType type_of_game)
     stack = std::make_unique<StackAdapter>();
     deck = std::make_unique<DeckAdapter>();
     set_builder(no_of_players, type_of_game);
+//    deck_director->construct();
+//    distribute_cards();
 
 }
 
@@ -79,6 +81,18 @@ void Rummy::print() const
     {
         gotoxy(player.id*20,3);
         std::cout << "Player" << player.id;
+    }
+}
+
+void Rummy::distribute_cards()
+{
+    for(auto & x : players)
+    {
+        for(int i = 0; i <15; i++)
+        {
+//            x.hand.push_back(deck->top_card());
+//            deck->pop_card();
+        }
     }
 }
 

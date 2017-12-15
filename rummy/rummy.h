@@ -31,6 +31,7 @@ class Rummy : public RummyInterface
 
     void set_builder(std::size_t no_of_players, GameType type_of_game);
     void print() const;
+    void distribute_cards();
 public:
     static Rummy &get(std::size_t n, GameType type_of_game);
     void play() override;
